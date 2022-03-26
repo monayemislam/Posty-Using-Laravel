@@ -30,10 +30,13 @@
       <ul class="navbar-nav mb-2 mb-lg-0">
         @auth
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Monayem</a>
+            <a class="nav-link" aria-current="page" href="#">Monayem</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Log Out</a>
+            <form action="{{route('logout')}}" method="POST">
+                @csrf
+                <button class="nav-link" type="submit">Logout</button>
+            </form>
           </li>
         @endauth
         @guest
