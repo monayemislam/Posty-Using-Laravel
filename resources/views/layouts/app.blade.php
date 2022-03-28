@@ -30,7 +30,7 @@
       <ul class="navbar-nav mb-2 mb-lg-0">
         @auth
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">Monayem</a>
+            <a class="nav-link" aria-current="page" href="#">{{auth()->user()->name}}</a>
           </li>
           <li class="nav-item">
             <form action="{{route('logout')}}" method="POST">

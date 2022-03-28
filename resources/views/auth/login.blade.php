@@ -31,6 +31,13 @@
             @enderror
         </div>
 
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="remember" id="remember">
+            <label class="form-check-label">
+                Remember me
+            </label>
+        </div>
+
         <div class="mt-2">
             <button type="submit" class="btn btn-primary">Login</button>
         </div>
