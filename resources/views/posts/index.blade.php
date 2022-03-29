@@ -19,17 +19,17 @@
 <div class="row justify-content-center">
         <div class="col-md-5 bg-white p-4">
         @if($posts->count())
-        <div>
-            @foreach($posts as $post)
+            <div>
+                @foreach($posts as $post)
 
-            <div class="m-2 p-3 bg-light">
-                <div class="d-flex justify-content-between"><a href="#">{{$post->user->name}}</a><span>{{$post->created_at->diffForHumans()}}</span></div>
-                <div>{{$post->body}}</div>
+                <div class="m-2 p-3 bg-light">
+                    <div class="d-flex justify-content-between"><a href="#">{{$post->user->name}}</a><span>{{$post->created_at->diffForHumans()}}</span></div>
+                    <div>{{$post->body}}</div>
+                </div>
+
+                @endforeach
             </div>
-
-            @endforeach
-        </div>
-        {{ $posts->links() }}
+        <div style="box-sizing: border-box;">{{ $posts->links() }}<div>
         @else
         <div class="alert alert-warning" role="alert">
             There is no post.
