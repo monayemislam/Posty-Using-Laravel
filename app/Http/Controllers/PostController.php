@@ -14,7 +14,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $postsList = Posts::get();
+        $postsList = Posts::Paginate(4);
         return view('posts.index',[
             'posts'=>$postsList
         ]);
@@ -45,6 +45,8 @@ class PostController extends Controller
         $request->user()->posts()->create([
             'body'=> $request->body
         ]);
+
+        return redirect()->back();
 
     }
 

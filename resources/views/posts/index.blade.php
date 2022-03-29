@@ -29,9 +29,10 @@
 
             @endforeach
         </div>
+        {{ $posts->links() }}
         @else
         <div class="alert alert-warning" role="alert">
-            There is post.
+            There is no post.
         </div>
         @endif
         </div>
