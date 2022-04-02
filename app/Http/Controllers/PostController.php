@@ -14,7 +14,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $postsList = Posts::Paginate(4);
+        $postsList = Posts::orderBy('id','desc')->Paginate(4);
         return view('posts.index',[
             'posts'=>$postsList
         ]);
